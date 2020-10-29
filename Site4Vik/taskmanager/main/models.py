@@ -2,9 +2,9 @@ from django.db import models
 
 
 class Task(models.Model):
-    title = models.CharField('Название', max_length=50)
+    title = models.CharField('Название', max_length=200)
     task = models.TextField('Описание')
-    image = models.FileField(blank=True, upload_to='image/blog/%Y/%m/%d',
+    image = models.ImageField(blank=True, upload_to='image/blog/%Y/%m/%d',
                               verbose_name='Ссылка картинки')
 
     def __str__(self):

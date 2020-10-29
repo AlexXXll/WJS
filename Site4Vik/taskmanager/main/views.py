@@ -18,7 +18,8 @@ def create(request):
         form = TaskForm(request.POST or None, request.FILES or None)
         if form.is_valid():
             form.save()
-            return redirect('home')
+            img_obj = form.instance
+            return render(request, 'main/create.html', {'form': form, 'img_obj': img_obj})
         else:
             error = 'Форма была неверной'
 
@@ -27,4 +28,4 @@ def create(request):
         'form': form,
         'error': error
     }
-    return render(request, 'main/create.html', context)
+    return render(request, 'main/create.html', context, {'form': form})

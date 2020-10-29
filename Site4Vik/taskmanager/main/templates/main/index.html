@@ -11,7 +11,10 @@
             <div class="alert alert-warning mt-2">
                 <h3>{{ el.title }}</h3>
                 <p>{{ el.task }}</p>
-                <img src="{{ instance.image.url }}" class="img-responsive" />
+                {% if img_obj %}
+                    <h3>Succesfully uploaded : {{img_obj.title}}</h3>
+                    <img src="{{ img_obj.image.url }}" alt="connect" style="max-height:300px" />
+                {% endif %}
             </div>
         {% endfor %}
     {% else %}
