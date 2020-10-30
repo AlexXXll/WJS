@@ -13,7 +13,7 @@ html {
 
 .firstHeading{
     background: #4b0082;
-    background-image: url("../img/BG/bg-header.png");
-    width: 1200px;
-    height: 492px;
+    background-image: url("../image/bg.png");
+    width: 1800px;
+    height: 200px;
 }
