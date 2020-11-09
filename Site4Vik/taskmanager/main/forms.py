@@ -1,11 +1,14 @@
 from .models import Task
+from .models import IMG
 from django.forms import ModelForm, TextInput, Textarea
 
 
 class TaskForm(ModelForm):
+
+
     class Meta:
         model = Task
-        fields = ["title", "task", "image"]
+        fields = ["title", "task", "image",]
         widgets = {
             "title": TextInput(attrs={
                 'class': 'form-control',
