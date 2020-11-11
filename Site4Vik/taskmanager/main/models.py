@@ -6,10 +6,7 @@ class Task(models.Model):
     task = models.TextField('Наполнение')
     image = models.ImageField(blank=True, upload_to='image/blog',
                                verbose_name='Ссылка картинки')
-class IMG(models.Model):
-    images = models.ImageField(blank=True, upload_to='image/blog',
-                              verbose_name='Ссылка картинок')
-    taskm = models.ForeignKey(Task, on_delete=models.CASCADE, related_name='image/blog')
+
 
     def __str__(self):
         return self.title
@@ -17,3 +14,8 @@ class IMG(models.Model):
     class Meta:
         verbose_name = 'Задача'
         verbose_name_plural = 'Задачи'
+
+class IMG(models.Model):
+    images = models.ImageField(blank=True, upload_to='image/blog',
+                              verbose_name='Ссылка картинок')
+    taskm = models.ForeignKey(Task, on_delete=models.CASCADE, related_name='image/blog')
