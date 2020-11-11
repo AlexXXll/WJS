@@ -12,6 +12,7 @@ html {
 
 
 .firstHeading{
+<<<<<<< HEAD
     width: 100%;
     height: auto;
 }
@@ -32,4 +33,10 @@ height : 50px;
 bottom : 0;
 
 background-color: #000;
+=======
+    background: #4b0082;
+    background-image: url("../image/bg.png");
+    width: 1800px;
+    height: 200px;
+>>>>>>> parent of 98d73df... Скоро deep end
 }

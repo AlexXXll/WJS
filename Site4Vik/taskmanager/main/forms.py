@@ -16,6 +16,6 @@ class TaskForm(ModelForm):
             }),
             "task": Textarea(attrs={
                 'class': 'form-control',
-                'placeholder': 'Введите наполнение'
+                'placeholder': 'Введите описание'
             }),
         }
