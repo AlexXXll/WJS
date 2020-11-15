@@ -5,15 +5,16 @@
 {% endblock %}
 
 {% block content %}
-    <h1>Главная страница</h1>
+    <h1 class="p-2 text-light">Описание свитков</h1>
     {% if tasks %}
-        {% for el in tasks %}
+        {% for post in tasks %}
             <div class="alert alert-warning mt-2">
-                <h3>{{ el.title }}</h3>
-                <p>{{ el.task }}</p>
-                {% if el.image %}
-                    <img src="{{ el.image.url }}" alt="connect" style="max-height:300px" />
+                <h3>{{ post.title }}</h3>
+                <p>{{ post.task }}</p>
+                {% if post.image %}
+                    <img src="{{ post.image.url }}" alt="connect" style="max-height:300px" />
                 {% endif %}
+                <a href="{% url 'detail' post.id%}" class="btn btn-primary btn-md"> читать ещё</a>
             </div>
         {% endfor %}
     {% else %}

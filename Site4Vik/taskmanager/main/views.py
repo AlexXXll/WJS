@@ -1,14 +1,21 @@
-from django.shortcuts import render, redirect
-from .models import Task
+from django.shortcuts import render, redirect, get_object_or_404
+from .models import Task, TaskImage
 from .forms import TaskForm
 
 
-def index(request):
+def index_view(request):
     tasks = Task.objects.order_by('-id')
     return render(request, 'main/index.html', {'title': 'Главная страница сайта', 'tasks': tasks})
 
+def detail_view(request, id):
+    post = get_object_or_404(Task, id=id)
+    photos = TaskImage.objects.filter(post=post)
+    return render(request, 'detail.html', {
+        'post':post,
+        'photos':photos
+    })
 
-def about(request):
+def about_view(request):
     return render(request, 'main/about.html')
 
 

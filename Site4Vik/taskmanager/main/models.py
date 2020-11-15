@@ -4,23 +4,22 @@ from django.db import models
 class Task(models.Model):
     title = models.CharField('Название', max_length=200)
     task = models.TextField('Наполнение')
-<<<<<<< HEAD
-    image = models.ImageField(blank=True, upload_to='image/blog',
-                               verbose_name='Ссылка картинки')
-
-=======
-    image = models.ImageField(blank=True, upload_to='image/blog/%Y/%m/%d',
-                              verbose_name='Ссылка картинки')
->>>>>>> parent of 98d73df... Скоро deep end
+    image = models.ImageField(blank=True)
 
     def __str__(self):
         return self.title
 
     class Meta:
-        verbose_name = 'Задача'
-        verbose_name_plural = 'Задачи'
+        verbose_name = 'Пост'
+        verbose_name_plural = 'Посты'
+class TaskImage(models.Model):
+    post = models.ForeignKey(Task, default=None, on_delete=models.CASCADE)
+    image = models.ImageField(upload_to='image/blog',
+                              verbose_name='Ссылка картинки')
 
-class IMG(models.Model):
-    images = models.ImageField(blank=True, upload_to='image/blog',
-                              verbose_name='Ссылка картинок')
-    taskm = models.ForeignKey(Task, on_delete=models.CASCADE, related_name='image/blog')
+    def __str__(self):
+        return self.post.title
+
+    class Meta:
+        verbose_name = 'Фотография поста'
+        verbose_name_plural = 'Фотографии поста'
