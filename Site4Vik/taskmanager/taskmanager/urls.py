@@ -11,4 +11,4 @@ urlpatterns = [
     path('', views.index_view, name='home'),
     path('', views.about_view, name='about'),
     path('<int:id>/', views.detail_view, name='detail')
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
