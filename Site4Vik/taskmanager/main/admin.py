@@ -1,12 +1,12 @@
 from django.contrib import admin
 from .models import Task, TaskImage
 
-class TaskImageAdmin(admin.StackedInline):
+class TaskImageInline(admin.TabularInline):
     model = TaskImage
 
 @admin.register(Task)
 class TaskAdmin(admin.ModelAdmin):
-    inlines = [TaskImageAdmin]
+    inlines = [TaskImageInline]
 
     class Meta:
         model=Task

@@ -4,8 +4,9 @@ from .forms import TaskForm
 
 
 def index_view(request):
-    tasks = Task.objects.order_by('-id')
-    return render(request, 'main/index.html', {'title': 'Главная страница сайта', 'tasks': tasks})
+    tasks = Task.objects.order_by('id')
+    photos = TaskImage.objects.all
+    return render(request, 'main/index.html', {'title': 'Главная страница сайта', 'tasks': tasks, 'photos':photos})
 
 def detail_view(request, id):
     post = get_object_or_404(Task, id=id)
