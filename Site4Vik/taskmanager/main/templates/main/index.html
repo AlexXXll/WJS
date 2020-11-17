@@ -11,9 +11,9 @@
             <div class="alert alert-warning mt-2">
                 <h3>{{ post.title }}</h3>
                 <p>{{ post.task }}</p>
-                {% if post.image %}
+                {% for post in photos %}
                     <img src="{{ post.image.url }}" alt="connect" style="max-height:300px" />
-                {% endif %}
+                {% endfor %}
                 <a href="{% url 'detail' post.id%}" class="btn btn-primary btn-md"> читать ещё</a>
             </div>
         {% endfor %}
