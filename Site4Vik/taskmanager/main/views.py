@@ -3,11 +3,15 @@ from .models import Task, TaskImage
 from .forms import TaskForm
 
 
-def index_view(request, task_id):
+def index_view(request):
     tasks = Task.objects.order_by('id')
-    post = get_object_or_404(Task, id=task_id)
+    post = get_object_or_404(Task.id)
     photos = TaskImage.objects.filter(post=post)
-    return render(request, 'main/index.html', {'title': 'Главная страница сайта', 'tasks': tasks, 'post':post, 'photos':photos})
+    return render(request, 'main/index.html', {'title': 'Главная страница сайта',
+                                               'tasks': tasks,
+                                               'post':post,
+                                               'photos':photos
+                                               })
 
 def detail_view(request, id):
     post = get_object_or_404(Task, id=id)
