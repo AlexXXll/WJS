@@ -5,8 +5,9 @@ from django.conf import settings
 from . import views
 
 urlpatterns = [
-    path('', views.index, name='home'),
-    path('about', views.about, name='about'),
+    path('', views.index_view, name='home'),
+    path('about', views.about_view, name='about'),
+path('<int:id>/', views.detail_view, name='detail')
     path('create', views.create, name='create'),
 ]
 
