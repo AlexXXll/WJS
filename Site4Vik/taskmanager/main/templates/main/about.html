@@ -1,10 +1,14 @@
 {% extends 'main/base.html' %}
 
 {% block title %}
-Страница про нас
+Меню
 {% endblock %}
 
 {% block content %}
-    <h1>Страница про нас</h1>
-    <p>Страница про нас</p>
+
+    <h1 class="p-2 text-light">Меню</h1>
+{% load sitetree %}
+<div class="alert alert-light mt-2">
+    {% sitetree_menu from "mytree" include "trunk,topmenu" %}
+</div>
 {% endblock %}

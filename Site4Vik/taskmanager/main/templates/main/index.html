@@ -5,24 +5,17 @@
 {% endblock %}
 
 {% block content %}
-    <h1 class="p-2 text-light">Описание свитков</h1>
+    <h4 class="p-2 text-light">Описание свитков</h4>
     {% if tasks %}
         {% for post in tasks %}
-            <div class="alert alert-warning mt-2">
-                <h3>{{ post.title }}</h3>
-                <p>{{ post.task }}</p>
-
-
-                    {% for p in photos %}
-
-                            <img src="{{p.image.url}}" width="300mp" >
-
-                    {% endfor %}
+            <div class="alert alert-light mt-2">
+                <h3 class="p-2 text-dark">{{ post.title }}</h3>
+                <p class="p-2 text-dark">{{ post.task }}</p>
 
             </div>
         {% endfor %}
     {% else %}
-        <p>У нас нет записей!</p>
+        <p class="p-2 text-light">У нас нет записей!</p>
     {% endif %}
 
 {% endblock %}

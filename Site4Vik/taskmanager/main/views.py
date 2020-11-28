@@ -5,13 +5,9 @@ from .forms import TaskForm
 
 def index_view(request):
     tasks = Task.objects.order_by('id')
-    post = get_list_or_404(Task)
-    photos = TaskImage.objects.filter(post)
-    return render(request, 'main/index.html', {'title': 'Главная страница сайта',
-                                               'tasks': tasks,
-                                               'post':post,
-                                               'photos':photos
-                                               })
+
+
+    return render(request, 'main/index.html', {'title': 'Главная страница сайта', 'tasks': tasks })
 
 def detail_view(request, id):
     post = get_object_or_404(Task, id=id)

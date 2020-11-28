@@ -12,13 +12,13 @@
     <img src="{%static 'image/bg.png' %}" alt="BG" class="firstHeading">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 </head>
-<body>
+<body class="body">
     <div class="body">
         <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
             <h5 class="my-0 mr-md-auto font-weight-normal">MagickScrolls</h5>
             <nav class="my-2 my-md-0 mr-md-3">
             <a class="p-2 text-dark" href="{% url 'home'  %}">Главная</a>
-            <a class="p-2 text-dark" href="{% url 'about' %}">Про нас</a>
+            <a class="p-2 text-dark" href="{% url 'about' %}">Меню</a>
 
         </nav>
         </div>
@@ -27,9 +27,11 @@
         {% block content %}{% endblock %}
         </div>
 
-        <div class="footer">
-            <a></a>
-        </div>
+
+    </div>
+    <div class="footer">
+        <h5 class="my-0 mr-md-auto text-light font-weight-normal">&copy; <?php echo date('Y'); ?> MagickScrolls</h5>
+        <nav class="my-2 my-md-0 mr-md-3">
     </div>
 </body>
 </html>
