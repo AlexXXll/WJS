@@ -49,35 +49,41 @@
             </div>
             {% block content %}{% endblock content %}
             <!-- Navigation -->
-<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
-    <div class="container">
-  <div class="row">
-    <div class="col">
-      {% show_menu 1 %}
-    </div>
-    <div class="col">
-      2 из 2
-    </div>
-  </div>
-  <div class="row">
-    <div class="col">
-      1 из 3
-    </div>
-    <div class="col">
-      2 из 3
-    </div>
-    <div class="col">
-      3 из 3
-    </div>
-  </div>
-</div>
-</nav>
+            <div class="container">
+                <div class="row justify-content-md-center">
+                    <div class="col-sm-4">
+                        <a> Scrolls </a>
+                        {% show_menu_below_id "Scrolls" %}
+                    </div>
+                    <div class="col-sm-4">
+                        <a> Artifacts </a>
+                        {% show_menu_below_id "Artifact" %}
+                    </div>
+                    <div class="col-sm-4">
+                        <a> Rituals </a>
+                        {% show_menu_below_id "Rituals" %}
+                    </div>
+                </div>
+                <div class="row justify-content-md-center">
+                    <div class="col-sm-4">
+                        <a> Reserches </a>
+                        {% show_menu_below_id "Reserches" %}
+                    </div>
+                    <div class="col-sm-4">
+                        <a> Technic zone </a>
+                        {% show_menu_below_id "Technic zone" %}
+                    </div>
+                    <div class="col-sm-4">
+                        <a> Config parameters </a>
+                        {% show_menu_below_id "Config parameters" %}
+                    </div>
+                </div>
+            </div>
+            <div class="navbar-fixed-bottom ">
+                <h5 class="my-0 mr-md-auto text-light font-weight-normal">&copy; <?php echo date('Y'); ?> MagickScrolls</h5>
+                <nav class="my-2 my-md-0 mr-md-3">
+            </div>
+            {% render_block "js" %}
         </div>
-
-        <div class="navbar-fixed-bottom ">
-            <h5 class="my-0 mr-md-auto text-light font-weight-normal">&copy; <?php echo date('Y'); ?> MagickScrolls</h5>
-            <nav class="my-2 my-md-0 mr-md-3">
-        </div>
-        {% render_block "js" %}
     </body>
 </html>
