@@ -92,7 +92,7 @@ MEDIA_ROOT = os.path.join(DATA_DIR, 'media')
 STATIC_ROOT = os.path.join(DATA_DIR, 'static')
 
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'mysite', 'static'),
+    os.path.join(BASE_DIR, 'mysite', 'static', 'locale'),
 )
 SITE_ID = 1
 
@@ -178,6 +178,8 @@ INSTALLED_APPS = [
     'djangocms_style',
     'djangocms_googlemap',
     'djangocms_video',
+    'sorl.thumbnail',
+    'slider',
     'mysite'
 
 ]
@@ -185,7 +187,15 @@ INSTALLED_APPS = [
 LANGUAGES = (
     ## Customize this
     ('ru', gettext('ru')),
+    ('en', gettext('en')),
 )
+
+LOCALE_PATHS = (
+    'locale',
+    # os.path.join(PROJECT_DIR, 'locale'),
+)
+
+'cms.middleware.language.LanguageCookieMiddleware'
 
 CMS_LANGUAGES = {
     ## Customize this
@@ -193,6 +203,15 @@ CMS_LANGUAGES = {
         {
             'code': 'ru',
             'name': gettext('ru'),
+            'redirect_on_fallback': True,
+            'public': True,
+            'hide_untranslated': False,
+        },
+    ],
+    2: [
+        {
+            'code': 'en',
+            'name': gettext('en'),
             'redirect_on_fallback': True,
             'public': True,
             'hide_untranslated': False,

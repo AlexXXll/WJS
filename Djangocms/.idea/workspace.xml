@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="145f353a-ee8a-4093-ae30-879bf2045c63" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/WJSDcms.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/WJSDcms.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mysite/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/templates/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project.db" beforeDir="false" afterPath="$PROJECT_DIR$/project.db" afterDir="false" />
     </list>
@@ -10,6 +14,17 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="PREVIEW_PUSH_PROTECTED_ONLY" value="true" />
@@ -25,17 +40,24 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="settings.github" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Admin\PycharmProjects\ADK\WJS\Djangocms" />
       <recent name="C:\Users\Admin\PycharmProjects\ADK\WJS\Djangocms\mysite\static" />
       <recent name="C:\Users\Admin\PycharmProjects\ADK\WJS\Djangocms\static\css" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Admin\PycharmProjects\ADK\WJS\Djangocms\mysite" />
+      <recent name="C:\Users\Admin\PycharmProjects\ADK\WJS\Djangocms\template_tags" />
+      <recent name="C:\Users\Admin\PycharmProjects\ADK\WJS\Djangocms" />
     </key>
   </component>
   <component name="RunManager">
@@ -77,6 +99,8 @@
       <workItem from="1607788021243" duration="756000" />
       <workItem from="1608033362755" duration="917000" />
       <workItem from="1608100493051" duration="6995000" />
+      <workItem from="1609354956420" duration="3005000" />
+      <workItem from="1609363777350" duration="12766000" />
     </task>
     <servers />
   </component>
@@ -84,9 +108,36 @@
     <option name="version" value="2" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="289" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1608107586957">
+    <state x="387" y="104" key="#Servers" timestamp="1609355354135">
       <screen x="0" y="0" width="1360" height="738" />
     </state>
-    <state x="289" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1360.738@0.0.1360.738" timestamp="1608107586957" />
+    <state x="387" y="104" key="#Servers/0.0.1360.738@0.0.1360.738" timestamp="1609355354135" />
+    <state x="427" y="170" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1609365008766">
+      <screen x="0" y="0" width="1360" height="738" />
+    </state>
+    <state x="427" y="170" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1360.738@0.0.1360.738" timestamp="1609365008766" />
+    <state x="409" y="115" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1609373472485">
+      <screen x="0" y="0" width="1360" height="738" />
+    </state>
+    <state x="409" y="115" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1360.738@0.0.1360.738" timestamp="1609373472485" />
+    <state x="180" y="13" key="SettingsEditor" timestamp="1609373820757">
+      <screen x="0" y="0" width="1360" height="738" />
+    </state>
+    <state x="180" y="13" key="SettingsEditor/0.0.1360.738@0.0.1360.738" timestamp="1609373820757" />
+    <state x="289" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1609374988895">
+      <screen x="0" y="0" width="1360" height="738" />
+    </state>
+    <state x="289" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1360.738@0.0.1360.738" timestamp="1609374988895" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/venv/Lib/site-packages/cms/plugin_base.py</url>
+          <line>103</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
